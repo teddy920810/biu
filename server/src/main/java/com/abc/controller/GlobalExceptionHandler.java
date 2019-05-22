@@ -42,6 +42,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     @ResponseBody
     public Json page401(UnauthenticatedException e) {
         String eMsg = e.getMessage();
+        System.out.println(e);
         if (StringUtils.startsWithIgnoreCase(eMsg,GUEST_ONLY)){
             return new Json("Unauthenticated", false, Codes.UNAUTHEN, "只允许游客访问，若您已登录，请先退出登录", null)
                     .data("detail",e.getMessage());

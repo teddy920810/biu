@@ -3,7 +3,7 @@ package com.abc.constant;
 import org.apache.shiro.authz.UnauthorizedException;
 
 /**
- * created by CaiBaoHong at 2018/4/18 11:07<br>
+ * created by CaiBaoHong at 2018/5/28 11:07<br>
  *     响应的code
  */
 public interface Codes {

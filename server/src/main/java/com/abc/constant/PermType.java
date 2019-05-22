@@ -1,7 +1,7 @@
 package com.abc.constant;
 
 /**
- * created by CaiBaoHong at 2018/5/16 11:23<br>
+ * created by CaiBaoHong at 2018/5/24 11:23<br>
  */
 public interface PermType {
 

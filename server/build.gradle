@@ -57,6 +57,10 @@ dependencies {
     compile 'com.alibaba:fastjson:1.2.47'
     compile 'org.apache.commons:commons-lang3'
 
+    //文件上传
+    compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.3.1'
+    compile group: 'commons-io', name: 'commons-io', version: '2.2'
+
 }
 
 //设置后依赖不用写版本号

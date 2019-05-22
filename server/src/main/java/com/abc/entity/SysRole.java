@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * created by CaiBaoHong at 2018/4/17 14:55<br>
+ * created by CaiBaoHong at 2018/5/25 14:55<br>
  */
 @TableName("sys_role")
 public class SysRole extends Model<SysRole> {
