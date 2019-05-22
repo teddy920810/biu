@@ -1,105 +1,47 @@
 /**
- * “角色管理”相关接口
+ * “网站配置”相关接口
  */
 import request from '@/utils/request'
 
 export default {
   /**
-   * 添加角色
+   * 添加配置
    * @param data
    */
-  addRole(data) {
+  addWebConfig(data) {
     return request({
-      url: '/sys_role',
+      url: '/webConfig',
       method: 'post',
       data
     })
   },
 
   /**
-   * 删除角色
+   * 更新网站配置
    * @param data
    */
-  deleteRole(data) {
+  updateWebConfig(data) {
     return request({
-      url: '/sys_role',
-      method: 'delete',
+      url: '/webConfig',
+      method: 'put',
       data
     })
   },
-
-  /**
-   * 查询角色
-   * @param queryParam
-   * @param pageParam
-   */
-  queryRole(queryParam,pageParam) {
+  /*updateWebConfig(data) {
     return request({
-      url: '/sys_role/query',
-      method: 'post',
-      data: {
-        ...queryParam,
-        current: pageParam.current,
-        size: pageParam.size
-      }
-    })
-  },
-
-  /**
-   * 更新角色
-   * @param data
-   */
-  updateRole(data) {
-    return request({
-      url: '/sys_role/info',
-      method: 'patch',
-      data
-    })
-  },
-
-  /**
-   * 更新角色的权限
-   * @param perm
-   */
-  updateRolePerms(data) {
-    return request({
-      url: '/sys_role/perm',
-      method: 'patch',
-      data
-    })
-  },
-
-  /**
-   * 添加角色的权限
-   * @param perm
-   */
-  addRolePerm(data) {
-    return request({
-      url: '/sys_role/perm',
+      url: '/file/upload',
       method: 'post',
       data
     })
-  },
+  },*/
 
   /**
-   * 删除角色的权限
-   * @param perm
+   * 查询网站配置
+   * @param wid
    */
-  deleteRolePerm(data) {
+  findWebConfig(wid) {
     return request({
-      url: '/sys_role/perm',
-      method: 'delete',
-      data
-    })
-  },
-
-  /**
-   * 查选角色的所有权限值
-   * @param rid
-   */
-  findRolePerms(rid) {
-    return request({
-      url: '/sys_role/'+rid+'/perms',
+      url: '/webConfig/'+wid,
       method: 'get'
     })
   }

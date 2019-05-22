@@ -32,6 +32,7 @@ service.interceptors.response.use(
    * 如通过xmlhttprequest 状态码标识 逻辑可写在下面error中
    */
   res => {
+    console.log(res)
     if(res.data.succ){
       //如果后台返回的json显示成功，pass
       return res;
@@ -55,8 +56,8 @@ service.interceptors.response.use(
   /**
    * 请求发生错误，一般都是服务器抛异常了
    */
-  err => {
-    console.error('request err: %o', err)// for debug
+  error => {
+    console.log( error)// for debug
     Message({message: error.message,type: 'error',duration: 5000})
     return Promise.reject(error)
   }

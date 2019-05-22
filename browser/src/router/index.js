@@ -43,6 +43,17 @@ export const constantRouterMap = [
       meta: { title: '首页', icon: 'dashboard', noCache: true }
     }]
   },
+  {
+    path: '/webConfig',
+    component: Layout,
+    redirect: '/webConfig/index',
+    children: [{
+      path: 'index',
+      component: _import('webConfig/index'),
+      name: 'webConfig',
+      meta: { title: '网站配置', icon: 'dashboard', noCache: true }
+    }]
+  },
 ]
 
 export default new Router({
